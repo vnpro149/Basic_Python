@@ -1,0 +1,18 @@
+enable
+configure terminal
+hostname R1
+interface e0/0
+ip address dhcp
+no shut
+exit
+username vnpro password vnpro#123
+ip domain-name vnpro.net
+crypto key generate rsa
+1024
+ip ssh authentication-retries 3
+line vty 0 4
+transport input ssh
+login local
+exit
+enable password vnpro#321
+do wr

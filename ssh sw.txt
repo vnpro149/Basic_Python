@@ -1,0 +1,21 @@
+
+enable
+configure terminal
+hostname SW2
+interface e0/0
+no switchport
+ip address 10.215.27.32 255.255.254.0
+no shut
+exit
+ip route 0.0.0.0 0.0.0.0 10.215.26.1
+username vnpro password vnpro#123
+ip domain-name vnpro.net
+crypto key generate rsa
+1024
+ip ssh authentication-retries 3
+line vty 0 4
+transport input ssh
+login local
+exit
+enable password vnpro#321
+do wr
