@@ -19,3 +19,5 @@ for n in range(10,31):
         output=net_connect.send_config_set(ipvlan)
 data= net_connect.send_command("show ip int brief | i Vlan")
 print(data)
+
+net_connect.disconnect()
