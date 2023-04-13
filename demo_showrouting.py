@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 
 router={
     "device_type":"cisco_ios",
-    "ip":"10.215.26.219",
+    "ip":"10.215.27.32",
     "username":"vnpro",
     "password":"vnpro#123",
     "secret":"vnpro#321"
