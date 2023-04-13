@@ -21,3 +21,4 @@ for vrflines in data.splitlines():
 
 """data = net_connect.send_command("show ip route vrf Customer_A")
 print(data)"""
+net_connect.disconnect()
